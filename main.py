@@ -2,7 +2,7 @@ from google.cloud import bigquery
 
 bq_client = bigquery.Client()
 
-def ingest(data, context):
+def ingest_from_github(data, context):
   
   bucket_name = data['bucket']
   file_name = data['name']
