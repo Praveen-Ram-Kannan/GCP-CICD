@@ -3,13 +3,13 @@ from google.cloud import bigquery
 bq_client = bigquery.Client()
 
 def ingest_from_github(data, context):
-  print('Start!!!!!')
   
   bucket_name = data['bucket']
   file_name = data['name']
   table = "dataanalysis-330007.EmployeeDetails.Employee"
 
   job_config = bigquery.LoadJobConfig(
+    #   autodetect=True,
       schema=[
           bigquery.SchemaField("ID", "INTEGER"),
           bigquery.SchemaField("Prefix", "STRING"),
