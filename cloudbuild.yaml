@@ -1,6 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  logsBucket: 'praveen-logs'
   args:
   - functions
   - deploy
@@ -9,4 +8,6 @@ steps:
   - --trigger-http
   - --runtime=python37
   - --allow-unauthenticated
+ 
+logsBucket: 'praveen-logs'
  
