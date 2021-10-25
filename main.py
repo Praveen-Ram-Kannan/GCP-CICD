@@ -3,7 +3,7 @@ from google.cloud import bigquery
 bq_client = bigquery.Client()
 
 def ingest_from_github(data, context):
-  print('Start')
+  print('Start!')
   
   bucket_name = data['bucket']
   file_name = data['name']
